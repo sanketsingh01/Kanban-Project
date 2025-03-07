@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KANBAN BOARD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main_content">
+      <h1 class="title">KanBan Board 📄</h1>
+      <div class="board-buttons">
+        <button id="add-item-btn" class="item-btn">+ Add Item</button>
+        <button id="add-board-btn" class="item-btn">+ Add Board</button>
+      </div>
+      <div class="container">
+        <div id="todo-Board" class="Board">
+          <div id="todo-header" class="Board-header">
+            <span>TO DO</span>
+            <span id="todo-counter">0</span>
+          </div>
+
+          <div class="Board-content todo-content"></div>
+        </div>
+        <div id="Progress-Board" class="Board">
+          <div id="Progress-header" class="Board-header">
+            <span>In Progress</span>
+            <span id="Progress-counter">0</span>
+          </div>
+
+          <div class="Board-content Progress-content"></div>
+        </div>
+        <div id="Completed-Board" class="Board">
+          <div id="Completed-header" class="Board-header">
+            <span>Completed</span>
+            <span id="Completed-counter">0</span>
+          </div>
+
+          <div class="Board-content Completed-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Input-form" class="add-item-form">
+      <h2 class="Input_heading">Add New Item</h2>
+
+      <div class="details-container">
+        <label class="Task-item" for="Task_name">Task Title</label>
+        <input
+          class="task-Input"
+          type="text"
+          id="Task_name"
+          placeholder="Enter the Title name"
+          required
+        />
+
+        <label class="Task-item" for="decription">Description</label>
+        <textarea
+          class="task-Input"
+          name="Description"
+          id="decription"
+          rows="5"
+          cols="30"
+          placeholder="Enter Details about task"
+        ></textarea>
+
+        <label class="Task-item" for="Date">Date</label>
+        <input class="task-Input" type="date" name="Date" id="Date" />
+
+        <label class="Task-item" for="Priority">Priority</label>
+        <select class="task-Input" name="Priority" id="Priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <div class="submit-buttons">
+        <button class="Operation-btn" id="cancle-btn">Cancle</button>
+        <button class="Operation-btn" id="add-btn">Add Item</button>
+        <button class="Operation-btn" id="update-btn">Update</button>
+      </div>
+    </div>
+
+    <script src="test.js"></script>
+  </body>
+</html>
